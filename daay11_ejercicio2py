@@ -1,0 +1,38 @@
+# Nivel 2
+import math
+from statistics import mean, median, variance, stdev
+from collections import Counter
+# Ejercicio_1
+def pares_e_impares(n):
+    pares = sum(1 for i in range(n + 1) if i % 2 == 0)
+    impares = n + 1 - pares
+    return f"La cantidad de impares es {impares}. La cantidad de pares es {pares}."
+
+# Ejercicio_2
+def factorial(n):
+    return math.factorial(n)
+
+# Ejercicio_3
+def esta_vacio(parametro):
+    return not bool(parametro)
+
+# Ejercicio_4 – Estadísticas básicas
+def calcular_media(lista):
+    return mean(lista)
+
+def calcular_mediana(lista):
+    return median(lista)
+
+def calcular_moda(lista):
+    return Counter(lista).most_common(1)[0][0]
+
+def calcular_rango(lista):
+    return max(lista) - min(lista)
+
+def calcular_varianza(lista):
+    return variance(lista)
+
+def calcular_desviacion_estandar(lista):
+    return stdev(lista)
+
+
